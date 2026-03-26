@@ -1,0 +1,146 @@
+/* Базові налаштування */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Використовуємо vw для пропорційного масштабування шрифтів */
+html {
+    font-size: 1.2vw;
+}
+
+body {
+    background-color: #2b3036; /* Темний фон з макета */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2vw;
+}
+
+/* Головний контейнер */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    position: relative;
+}
+
+/* Сітка для лівих карток */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5vw;
+    width: 45%;
+    z-index: 2; /* Картки поверх блакитного фону */
+}
+
+/* Стилізація окремої картки */
+.card {
+    background: #ffffff;
+    padding: 2.5vw 1vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card i {
+    font-size: 3em;
+    color: #7bced6;
+    margin-bottom: 1vw;
+}
+
+.card h3 {
+    font-size: 0.8em;
+    margin-bottom: 0.8vw;
+    color: #000;
+    font-weight: bold;
+}
+
+.card p, .card a {
+    font-size: 0.7em;
+    color: #555;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* --- ДОДАНИЙ СТИЛЬ ДЛЯ ПОСИЛАННЯ --- */
+.card a {
+    color: #7bced6;
+    text-decoration: underline;
+}
+/* ----------------------------------- */
+
+/* Секція з формою (справа) */
+.contact-form-section {
+    width: 55%;
+    background-color: #7bced6; /* Блакитний колір */
+    padding: 4vw 4vw 4vw 8vw; /* Великий відступ зліва для накладання карток */
+    margin-left: -5vw; /* Ефект накладання (overlap) */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5em;
+    color: #1a1a1a;
+    margin-bottom: 2vw;
+}
+
+/* Сама форма */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1vw;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Кнопка */
+.contact-form button {
+    align-self: center;
+    padding: 0.8vw 2.5vw;
+    margin-top: 1vw;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ffffff;
+    color: #7bced6;
+}
+
+/* Медіа-запит для дуже малих екранів (щоб контент не був занадто дрібним на телефонах) */
+@media (max-width: 768px) {
+    html {
+        font-size: 2vw;
+    }
+    .container {
+        width: 90vw;
+    }
+}
