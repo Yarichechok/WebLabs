@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Візуалізація</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <h1>Сортування вибором (Selection Sort)</h1>
+
+    <div class="controls">
+        <label for="array-input">Введіть масив (через кому):</label>
+        <input type="text" id="array-input" value="64, 25, 12, 22, 11">
+        <button id="init-btn" type="button">Завантажити масив</button>
+        <button id="step-btn" type="button" disabled>Наступна ітерація</button>
+    </div>
+
+    <div id="array-container" class="array-container"></div>
+
+    <p id="status-message">Введіть дані та натисніть "Завантажити масив".</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
